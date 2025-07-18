@@ -61,11 +61,9 @@ export default function Index() {
           <div className="relative">
             {/* Main SaintVisionAI Logo */}
             <div className="flex items-center justify-center">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fb5221c5525e04e63936ba5c63a7a4eb2?format=webp&width=800"
-                alt="SaintVisionAI Logo"
-                className="w-14 h-14 object-contain saintvision-glow"
-              />
+              <span className="text-gold-400 font-bold text-lg saintvision-glow">
+                SaintVisionAI
+              </span>
             </div>
             {/* AI Indicator */}
             <div className="absolute -top-1 -right-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
