@@ -290,9 +290,17 @@ export default function Index() {
                 <div className="w-16 h-16 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold-500/30 transition-colors">
                   <Zap className="w-8 h-8 text-gold-300" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Real Integration</h4>
+                <h4 className="text-xl font-semibold mb-2 flex items-center">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                  Real Integration
+                </h4>
                 <p className="text-white/70">
-                  CRM, Stripe billing, voice commands, and enterprise tools
+                  <span className="text-blue-400">CRM</span>,{" "}
+                  <span className="text-green-400">Stripe billing</span>, voice
+                  commands, and{" "}
+                  <span className="text-purple-400 font-medium">
+                    enterprise tools
+                  </span>
                 </p>
               </div>
             </div>
