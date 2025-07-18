@@ -96,7 +96,7 @@ export default function Index() {
             </div>
           </div>
           <div>
-            <h1 className="text-xl font-bold saintvision-gradient-text tracking-tight">
+            <h1 className="text-xl font-bold saintvision-gradient-text tracking-tight font-dropline">
               SaintVisionAI™
             </h1>
             <p className="text-xs text-gold-300 -mt-1 font-medium">
