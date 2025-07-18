@@ -158,7 +158,7 @@ export default function Help() {
             <span className="text-charcoal-900 font-bold text-lg">Sv.</span>
           </div>
           <div>
-            <h1 className="text-xl font-bold saintvision-gradient-text">
+            <h1 className="text-xl font-bold saintvision-gradient-text font-dialien">
               SaintVisionAI™
             </h1>
             <p className="text-xs text-gold-300 -mt-1">Help Center</p>
