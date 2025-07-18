@@ -59,7 +59,7 @@ export default function Dashboard() {
         id: chatHistory.length + 2,
         type: "ai",
         content:
-          "I understand your query. Let me help you with that using our patented HACP™ technology...",
+          "I understand your query. Let me help you with that using our patented <span className='text-yellow-400 font-semibold'>HACP™</span> technology...",
         timestamp: new Date().toLocaleTimeString(),
         model: activeChat === "gpt4o" ? "GPT-4o" : "Azure Cognitive",
       };
