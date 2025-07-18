@@ -52,7 +52,7 @@ export default function SignIn() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.98) 0%, rgba(16, 22, 28, 0.95) 100%), 
-                           url('https://images.unsplash.com/photo-1614849563480-03992a2f1f2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+                                                      url('https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F318002d06a1a43ddab311553a42ce777?format=webp&width=800')`,
         }}
       ></div>
 
