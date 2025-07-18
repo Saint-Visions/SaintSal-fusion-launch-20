@@ -166,7 +166,9 @@ export default function Index() {
 
           {/* Hero Title */}
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-            <span className="saintvision-gradient-text">SaintSal™</span>
+            <span className="saintvision-gradient-text font-dialien">
+              SaintSal™
+            </span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gold-300 mb-6 font-medium">
             Cookin' Knowledge.
