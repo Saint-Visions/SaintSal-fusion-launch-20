@@ -35,7 +35,7 @@ export async function handleChat(req: Request, res: Response) {
     const response = completion.choices[0]?.message?.content || "No response";
 
     // Save chat to Supabase
-    await supabaseAdmin.from("chats").insert({
+    await getSupabaseAdmin().from("chats").insert({
       user_id: userId,
       message,
       response,
