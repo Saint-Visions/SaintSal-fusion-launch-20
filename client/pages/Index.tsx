@@ -245,9 +245,16 @@ export default function Index() {
                 <div className="w-16 h-16 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold-500/30 transition-colors">
                   <Brain className="w-8 h-8 text-gold-300" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">AI Companion</h4>
+                <h4 className="text-xl font-semibold mb-2 flex items-center">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
+                  AI Companion
+                </h4>
                 <p className="text-white/70">
-                  GPT-4o + Azure cognitive services with emotional intelligence
+                  <span className="text-blue-400 font-medium">GPT-4o</span> +{" "}
+                  <span className="text-purple-400">
+                    Azure cognitive services
+                  </span>{" "}
+                  with emotional intelligence
                 </p>
               </div>
 
