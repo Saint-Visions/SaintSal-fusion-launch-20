@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { getAzureOpenAI, getOpenAI } from "../lib/openai";
-import { supabaseAdmin } from "../lib/supabase";
+import { getSupabaseAdmin } from "../lib/supabase";
 
 export async function handleChat(req: Request, res: Response) {
   try {
