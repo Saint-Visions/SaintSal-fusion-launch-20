@@ -163,18 +163,18 @@ export default function SignUp() {
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-              <span className="saintvision-gradient-text">Welcome to</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              <span className="saintvision-gradient-text">Enterprise AI</span>
               <br />
-              <span className="text-gold-300">SaintSal™ Empire</span>
+              <span className="text-gold-300">Platform Access</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto">
-              Choose your plan and start cookin' knowledge with your GOTTA GUY™
-              AI companion.
+            <p className="text-lg md:text-xl text-white/75 mb-8 max-w-2xl mx-auto font-light">
+              Select your subscription tier for SaintVisionAI enterprise
+              infrastructure.
               <br />
-              <span className="text-gold-300 font-semibold">
-                Powered by patented HACP™ technology.
+              <span className="text-gold-300 font-medium text-base">
+                HACP™ compliant • SOC 2 certified • Enterprise SLA
               </span>
             </p>
           </div>
