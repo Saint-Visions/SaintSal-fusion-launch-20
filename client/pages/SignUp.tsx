@@ -57,7 +57,7 @@ export default function SignUp() {
       price: 97,
       popular: true,
       features: [
-        "Everything in Start Cookin'",
+        "Everything in Essential",
         "CRM integration",
         "Chrome extension",
         "Voice & SMS alerts",
