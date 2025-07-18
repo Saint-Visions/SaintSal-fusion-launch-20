@@ -42,15 +42,28 @@ export default function Index() {
 
       {/* Navigation */}
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12">
-        <div className="flex items-center space-x-2">
-          <div className="w-12 h-12 bg-gold-500 rounded-lg flex items-center justify-center">
-            <span className="text-charcoal-900 font-bold text-lg">Sv.</span>
+        <div className="flex items-center space-x-3">
+          <div className="relative">
+            {/* Main Logo Circle */}
+            <div className="w-14 h-14 bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 rounded-full flex items-center justify-center saintvision-glow shadow-xl">
+              <div className="w-10 h-10 bg-charcoal-900 rounded-full flex items-center justify-center">
+                <span className="text-gold-400 font-black text-lg tracking-tight">
+                  S
+                </span>
+              </div>
+            </div>
+            {/* AI Indicator */}
+            <div className="absolute -top-1 -right-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+            </div>
           </div>
           <div>
-            <h1 className="text-xl font-bold saintvision-gradient-text">
+            <h1 className="text-xl font-bold saintvision-gradient-text tracking-tight">
               SaintVisionAI™
             </h1>
-            <p className="text-xs text-gold-300 -mt-1">Cookin' Knowledge</p>
+            <p className="text-xs text-gold-300 -mt-1 font-medium">
+              Cookin' Knowledge
+            </p>
           </div>
         </div>
 
