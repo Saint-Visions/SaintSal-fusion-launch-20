@@ -153,7 +153,7 @@ export default function SignIn() {
             <div className="lg:hidden mb-12 text-center">
               <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F66fe1620bff64382adab8967dd63b6ff?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc699c3e88ec740d9a8bfc25cb015d198?format=webp&width=800"
                   alt="SaintVisionAI Logo"
                   className="w-20 h-20 object-contain"
                 />
