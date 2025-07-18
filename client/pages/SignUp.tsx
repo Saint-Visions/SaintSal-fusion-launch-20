@@ -53,7 +53,7 @@ export default function SignUp() {
     },
     {
       id: "pro",
-      name: "PartnerTech",
+      name: "Professional",
       price: 97,
       popular: true,
       features: [
