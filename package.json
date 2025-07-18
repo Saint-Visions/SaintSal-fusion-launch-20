@@ -8,7 +8,7 @@
     "build:client": "vite build",
     "build:server": "vite build --config vite.config.server.ts",
     "start": "node dist/server/node-build.mjs",
-    "builder:sync": "builder-cli sync --model page --apiKey=$NEXT_PUBLIC_BUILDER_API_KEY"
+    "builder:sync": "builder sync --model page --apiKey=065997bd13e4442e888a06852fcd61ba"
   },
   "dependencies": {
     "@radix-ui/react-toast": "^1.2.14",
