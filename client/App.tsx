@@ -45,6 +45,7 @@ const App = () => (
           <Route path="/chrome-install" element={<ChromeInstall />} />
           <Route path="/crm" element={<CRM />} />
           <Route path="/admin/clients" element={<AdminClients />} />
+          <Route path="/admin/logs" element={<AdminLogs />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
           <Route path="/help" element={<Help />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
