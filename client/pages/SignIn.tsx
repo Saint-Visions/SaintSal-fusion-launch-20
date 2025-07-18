@@ -152,7 +152,11 @@ export default function SignIn() {
             {/* Mobile Logo */}
             <div className="lg:hidden mb-12 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl flex items-center justify-center mx-auto mb-4 saintvision-glow">
-                <Crown className="w-8 h-8 text-charcoal-900" />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F66fe1620bff64382adab8967dd63b6ff?format=webp&width=800"
+                  alt="SaintVisionAI Logo"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
               <h1 className="text-2xl font-bold saintvision-gradient-text font-dialien">
                 SaintVisionAI™
