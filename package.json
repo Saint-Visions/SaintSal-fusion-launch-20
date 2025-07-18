@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@slack/web-api": "^7.9.3",
+    "@stripe/stripe-js": "^7.5.0",
     "@supabase/supabase-js": "^2.52.0",
     "@upstash/vector": "^1.2.2",
     "express": "^4.18.2",
