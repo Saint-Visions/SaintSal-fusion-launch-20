@@ -234,7 +234,13 @@ export default function SignUp() {
                           <div className="flex-1">
                             <div className="flex items-center justify-between mb-2">
                               <h3 className="text-2xl font-bold">
-                                {plan.name}
+                                {plan.id === "pro" ? (
+                                  <span className="text-blue-400">
+                                    {plan.name}
+                                  </span>
+                                ) : (
+                                  plan.name
+                                )}
                               </h3>
                               <div className="text-right">
                                 <span className="text-3xl font-bold">
