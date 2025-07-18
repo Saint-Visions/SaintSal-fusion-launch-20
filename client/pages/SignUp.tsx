@@ -185,9 +185,9 @@ export default function SignUp() {
               <div
                 className={`transform transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               >
-                <h2 className="text-3xl font-bold mb-8 text-center lg:text-left">
+                <h2 className="text-2xl font-semibold mb-8 text-center lg:text-left tracking-tight">
                   <span className="saintvision-gradient-text">
-                    Choose Your Power Level
+                    Subscription Tiers
                   </span>
                 </h2>
 
