@@ -92,7 +92,7 @@ export async function getSubscription(req: Request, res: Response) {
   try {
     const { userId } = req.params;
 
-    const { data: subscription } = await supabaseAdmin
+    const { data: subscription } = await getSupabaseAdmin()
       .from("subscriptions")
       .select("*")
       .eq("user_id", userId)
