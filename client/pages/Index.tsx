@@ -268,9 +268,15 @@ export default function Index() {
                 <div className="w-16 h-16 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold-500/30 transition-colors">
                   <Shield className="w-8 h-8 text-gold-300" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Faith-Aligned</h4>
+                <h4 className="text-xl font-semibold mb-2 flex items-center">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                  Faith-Aligned
+                </h4>
                 <p className="text-white/70">
-                  Secure, moral, and scalable with patented HACP™ technology
+                  <span className="text-green-400 font-medium">Secure</span>,
+                  moral, and scalable with patented{" "}
+                  <span className="text-yellow-400 font-semibold">HACP™</span>{" "}
+                  technology
                 </p>
               </div>
 
