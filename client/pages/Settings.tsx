@@ -120,7 +120,11 @@ export default function Settings() {
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12 border-b border-white/10">
         <div className="flex items-center space-x-4">
           <div className="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center saintvision-glow">
-            <Crown className="w-6 h-6 text-charcoal-900" />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2161a54cab734be28198076b16185a42?format=webp&width=800"
+              alt="SaintVisionAI Logo"
+              className="w-6 h-6 object-contain"
+            />
           </div>
           <div>
             <h1 className="text-xl font-bold saintvision-gradient-text">
@@ -563,7 +567,7 @@ export default function Settings() {
                             value={
                               showApiKey
                                 ? "sk-saintvision-12345678901234567890"
-                                : "sk-saintvision-•••��••••••••••••••••"
+                                : "sk-saintvision-••••••••••••••••••••"
                             }
                             readOnly
                             className="bg-white/5 border-white/20 text-white font-mono"
