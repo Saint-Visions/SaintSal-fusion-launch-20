@@ -50,6 +50,9 @@ const App = () => (
           <Route path="/admin/clients" element={<AdminClients />} />
           <Route path="/admin/logs" element={<AdminLogs />} />
           <Route path="/checkout-success" element={<CheckoutSuccess />} />
+          <Route path="/setup" element={<Setup />} />
+          <Route path="/referral/invite" element={<ReferralInvite />} />
+          <Route path="/workspace/:slug" element={<Workspace />} />
           <Route path="/help" element={<Help />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
