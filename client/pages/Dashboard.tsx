@@ -145,7 +145,10 @@ export default function Dashboard() {
                   onClick={() => setActiveChat("azure")}
                 >
                   <Shield className="w-4 h-4 mr-2" />
-                  Azure Cognitive
+                  <span className="text-purple-400 font-semibold">
+                    Azure
+                  </span>{" "}
+                  Cognitive
                   <Crown className="w-3 h-3 ml-auto" />
                 </Button>
               </div>
