@@ -89,20 +89,36 @@ export default function SignIn() {
 
               <p className="text-lg text-white/85 leading-relaxed font-light">
                 Advanced artificial intelligence infrastructure designed for
-                enterprise deployment. Secure, scalable, and compliant with
-                institutional requirements.
+                <span className="text-blue-400 font-medium">
+                  {" "}
+                  enterprise deployment
+                </span>
+                . Secure, scalable, and compliant with institutional
+                requirements.
               </p>
 
               {/* Key Capabilities */}
               <div className="space-y-3">
-                <div className="text-white/75 text-sm font-medium">
-                  • Multi-modal AI processing with enterprise-grade security
+                <div className="text-white/75 text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                  Multi-modal AI processing with{" "}
+                  <span className="text-green-400">
+                    enterprise-grade security
+                  </span>
                 </div>
-                <div className="text-white/75 text-sm font-medium">
-                  • HACP™ compliance and SOC 2 Type II certification
+                <div className="text-white/75 text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+                  <span className="text-yellow-400 font-semibold">HACP™</span>{" "}
+                  compliance and{" "}
+                  <span className="text-blue-400">SOC 2 Type II</span>{" "}
+                  certification
                 </div>
-                <div className="text-white/75 text-sm font-medium">
-                  • Scalable infrastructure with 99.9% uptime SLA
+                <div className="text-white/75 text-sm font-medium flex items-center">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  Scalable infrastructure with{" "}
+                  <span className="text-green-400 font-semibold">
+                    99.9% uptime SLA
+                  </span>
                 </div>
               </div>
 
