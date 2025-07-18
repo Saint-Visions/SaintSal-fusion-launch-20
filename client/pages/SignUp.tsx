@@ -164,9 +164,13 @@ export default function SignUp() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              <span className="saintvision-gradient-text">Enterprise AI</span>
+              <span className="saintvision-gradient-text font-dialien">
+                Enterprise AI
+              </span>
               <br />
-              <span className="text-gold-300">Platform Access</span>
+              <span className="text-gold-300 font-dialien">
+                Platform Access
+              </span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/75 mb-8 max-w-2xl mx-auto font-light">
