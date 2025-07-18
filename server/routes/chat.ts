@@ -11,7 +11,7 @@ export async function handleChat(req: Request, res: Response) {
     }
 
     // Use Azure OpenAI by default for production
-    const client = model.includes("azure") ? azureOpenAI : openai;
+    const client = model.includes("azure") ? getAzureOpenAI() : getOpenAI();
 
     const completion = await client.chat.completions.create({
       model: model.includes("azure")
