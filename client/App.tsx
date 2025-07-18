@@ -11,6 +11,13 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Pricing from "./pages/Pricing";
 import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Console from "./pages/Console";
+import PartnerTech from "./pages/PartnerTech";
+import Settings from "./pages/Settings";
+import Upgrade from "./pages/Upgrade";
+import ChromeInstall from "./pages/ChromeInstall";
+import CRM from "./pages/CRM";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
 
