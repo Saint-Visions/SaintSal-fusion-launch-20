@@ -56,7 +56,7 @@ export async function handleWebhook(req: Request, res: Response) {
     switch (event.type) {
       case "checkout.session.completed":
         const session = event.data.object as any;
-        await supabaseAdmin.from("subscriptions").upsert({
+        await getSupabaseAdmin().from("subscriptions").upsert({
           user_id: session.metadata.userId,
           stripe_customer_id: session.customer,
           stripe_subscription_id: session.subscription,
