@@ -36,12 +36,22 @@ export default function Index() {
         }}
       ></div>
 
-      {/* Hero Background Image */}
+      {/* Hero Background Image - Parallax Layer 2 */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.95) 0%, rgba(16, 22, 28, 0.85) 100%), 
                            url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          transform: `translateY(${scrollY * 0.3}px)`,
+        }}
+      ></div>
+
+      {/* Additional Parallax Background Layer */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%)`,
+          transform: `translateY(${scrollY * 0.2}px) scale(${1 + scrollY * 0.0001})`,
         }}
       ></div>
 
@@ -52,7 +62,7 @@ export default function Index() {
             {/* Main SaintVisionAI Logo */}
             <div className="w-16 h-16 flex items-center justify-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F1fad4f7c944249c3a8a02d8e8ae77b26?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fe06f5746a4ab460e897ca1d4deec20b6?format=webp&width=800"
                 alt="SaintVisionAI Logo"
                 className="w-14 h-14 object-contain saintvision-glow"
               />
@@ -104,15 +114,24 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <div className="relative z-40 flex flex-col items-center justify-center min-h-[80vh] text-center px-6">
+      <div
+        className="relative z-40 flex flex-col items-center justify-center min-h-[80vh] text-center px-6"
+        style={{
+          transform: `translateY(${scrollY * 0.1}px)`,
+        }}
+      >
         <div
           className={`transform transition-all duration-1000 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
         >
           {/* Main Logo/Brand */}
           <div className="mb-8">
             <div className="relative inline-block">
-              <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl flex items-center justify-center saintvision-glow-strong">
-                <Crown className="w-12 h-12 text-charcoal-900" />
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F07e8a947a43148568d37fdac2aba4734?format=webp&width=800"
+                  alt="SaintSal Logo"
+                  className="w-28 h-28 object-contain saintvision-glow-strong animate-pulse"
+                />
               </div>
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-white" />
@@ -171,7 +190,12 @@ export default function Index() {
       </div>
 
       {/* Features Preview */}
-      <div className="relative z-40 px-6 pb-20">
+      <div
+        className="relative z-40 px-6 pb-20"
+        style={{
+          transform: `translateY(${scrollY * 0.05}px)`,
+        }}
+      >
         <div className="max-w-6xl mx-auto">
           <div
             className={`transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
@@ -183,7 +207,12 @@ export default function Index() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Feature 1 */}
-              <div className="glass-morphism p-6 rounded-xl text-center group hover:saintvision-glow transition-all">
+              <div
+                className="glass-morphism p-6 rounded-xl text-center group hover:saintvision-glow transition-all"
+                style={{
+                  transform: `translateY(${scrollY * 0.02}px)`,
+                }}
+              >
                 <div className="w-16 h-16 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold-500/30 transition-colors">
                   <Brain className="w-8 h-8 text-gold-300" />
                 </div>
@@ -194,7 +223,12 @@ export default function Index() {
               </div>
 
               {/* Feature 2 */}
-              <div className="glass-morphism p-6 rounded-xl text-center group hover:saintvision-glow transition-all">
+              <div
+                className="glass-morphism p-6 rounded-xl text-center group hover:saintvision-glow transition-all"
+                style={{
+                  transform: `translateY(${scrollY * 0.03}px)`,
+                }}
+              >
                 <div className="w-16 h-16 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold-500/30 transition-colors">
                   <Shield className="w-8 h-8 text-gold-300" />
                 </div>
@@ -205,7 +239,12 @@ export default function Index() {
               </div>
 
               {/* Feature 3 */}
-              <div className="glass-morphism p-6 rounded-xl text-center group hover:saintvision-glow transition-all">
+              <div
+                className="glass-morphism p-6 rounded-xl text-center group hover:saintvision-glow transition-all"
+                style={{
+                  transform: `translateY(${scrollY * 0.04}px)`,
+                }}
+              >
                 <div className="w-16 h-16 bg-gold-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold-500/30 transition-colors">
                   <Zap className="w-8 h-8 text-gold-300" />
                 </div>
@@ -220,7 +259,12 @@ export default function Index() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="relative z-40 text-center pb-12">
+      <div
+        className="relative z-40 text-center pb-12"
+        style={{
+          transform: `translateY(${scrollY * 0.03}px)`,
+        }}
+      >
         <div
           className={`transform transition-all duration-1000 delay-700 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
         >
