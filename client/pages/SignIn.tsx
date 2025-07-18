@@ -82,9 +82,9 @@ export default function SignIn() {
             {/* Enterprise Content */}
             <div className="space-y-8">
               <h2 className="text-4xl font-bold leading-tight tracking-tight">
-                Enterprise AI
+                <span className="font-dropline">Enterprise AI</span>
                 <br />
-                <span className="saintvision-gradient-text">
+                <span className="saintvision-gradient-text font-dropline">
                   Intelligence Platform
                 </span>
               </h2>
