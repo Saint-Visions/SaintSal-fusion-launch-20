@@ -66,7 +66,11 @@ export default function SignIn() {
             <div className="mb-12">
               <div className="flex items-center space-x-4 mb-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl flex items-center justify-center saintvision-glow">
-                  <Crown className="w-8 h-8 text-charcoal-900" />
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F66fe1620bff64382adab8967dd63b6ff?format=webp&width=800"
+                    alt="SaintVisionAI Logo"
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
                 <div>
                   <h1 className="text-3xl font-bold saintvision-gradient-text font-dialien">
