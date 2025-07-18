@@ -43,7 +43,7 @@ export default function SignUp() {
   const plans = [
     {
       id: "starter",
-      name: "Start Cookin'",
+      name: "Essential",
       price: 27,
       popular: false,
       features: ["Unlimited AI chats", "Dual AI system", "Email support"],
