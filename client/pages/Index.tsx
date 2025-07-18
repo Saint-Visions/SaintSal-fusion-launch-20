@@ -228,9 +228,10 @@ export default function Index() {
           <div
             className={`transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
-            <h3 className="text-center text-gold-300 text-lg font-semibold mb-8">
-              Dual AI systems handle your business operations while you focus on
-              growth.
+            <h3 className="text-center text-white/80 text-lg font-semibold mb-8">
+              <span className="text-blue-400">Dual AI systems</span> handle your
+              business operations while you focus on
+              <span className="text-green-400 font-medium"> growth</span>.
             </h3>
 
             <div className="grid md:grid-cols-3 gap-8">
