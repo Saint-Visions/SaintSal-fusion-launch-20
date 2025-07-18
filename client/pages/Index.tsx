@@ -63,7 +63,7 @@ export default function Index() {
         }}
       >
         <div className="text-center">
-          <h2 className="text-6xl font-bold text-gold-400 mb-2 saintvision-glow tracking-wider">
+          <h2 className="text-6xl font-bold text-gold-400 mb-2 saintvision-glow tracking-wider font-dialien">
             SaintVisionAI
           </h2>
           <p className="text-xl text-gold-300 font-medium tracking-wide">
