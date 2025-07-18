@@ -170,7 +170,7 @@ export default function Index() {
               SaintSal™
             </span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gold-300 mb-6 font-medium">
+          <h2 className="text-2xl md:text-3xl text-gold-300 mb-6 font-medium font-dropline">
             Cookin' Knowledge.
           </h2>
 
