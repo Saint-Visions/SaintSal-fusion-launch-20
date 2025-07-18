@@ -21,6 +21,9 @@ import CRM from "./pages/CRM";
 import AdminClients from "./pages/AdminClients";
 import AdminLogs from "./pages/AdminLogs";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
+import Setup from "./pages/Setup";
+import ReferralInvite from "./pages/ReferralInvite";
+import Workspace from "./pages/Workspace";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
 
