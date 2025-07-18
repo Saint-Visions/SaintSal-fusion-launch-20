@@ -290,7 +290,11 @@ export default function Dashboard() {
                 >
                   {chat.type === "ai" && (
                     <div className="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <Crown className="w-5 h-5 text-charcoal-900" />
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F811b9dff8a62491f8723ec500d71ac68?format=webp&width=800"
+                        alt="SaintVisionAI Logo"
+                        className="w-5 h-5 object-contain"
+                      />
                     </div>
                   )}
                   <div
