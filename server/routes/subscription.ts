@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
-import { stripe, STRIPE_PRICE_IDS } from "../lib/stripe";
-import { supabaseAdmin } from "../lib/supabase";
+import { getSupabaseAdmin } from "../lib/supabase";
 
 export async function createCheckoutSession(req: Request, res: Response) {
   try {
