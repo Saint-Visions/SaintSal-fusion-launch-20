@@ -179,4 +179,11 @@
     letter-spacing: 0.05em;
     font-weight: 700;
   }
+
+  .font-dropline {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
 }
