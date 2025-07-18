@@ -60,14 +60,16 @@ export default function Index() {
         <div className="flex items-center space-x-3">
           <div className="relative">
             {/* Main SaintVisionAI Logo */}
-            <div className="flex items-center justify-center">
-              <span className="text-2xl font-bold text-gold-400 saintvision-glow tracking-tight">
-                Sv.
-              </span>
-            </div>
+            <div className="flex items-center justify-center" />
             {/* AI Indicator */}
             <div className="absolute -top-1 -right-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
-              <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div
+                className="w-2 h-2 bg-white rounded-full bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage:
+                    "url(https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/cookin-950b8e)",
+                }}
+              ></div>
             </div>
           </div>
           <div>
@@ -150,7 +152,7 @@ export default function Index() {
             AI doesn't just answer. It adapts. It empowers. It becomes
             <span className="text-gold-300 font-semibold">
               {" "}
-              your GOTTA GUY™
+              your GOTTA GUY���
             </span>
             .
           </p>
