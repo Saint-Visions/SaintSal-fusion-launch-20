@@ -72,7 +72,9 @@ export default function SignIn() {
                   <h1 className="text-3xl font-bold saintvision-gradient-text font-dialien">
                     SaintVisionAI™
                   </h1>
-                  <p className="text-gold-300 font-medium">Cookin' Knowledge</p>
+                  <p className="text-gold-300 font-medium font-dropline">
+                    Cookin' Knowledge
+                  </p>
                 </div>
               </div>
             </div>
