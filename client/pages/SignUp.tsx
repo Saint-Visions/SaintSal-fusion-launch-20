@@ -262,7 +262,30 @@ export default function SignUp() {
                                 >
                                   <CheckCircle className="w-4 h-4 text-gold-300 flex-shrink-0" />
                                   <span className="text-white/90 text-sm">
-                                    {feature}
+                                    {feature.includes("CRM") ? (
+                                      <>
+                                        <span className="text-green-400 font-medium">
+                                          CRM
+                                        </span>{" "}
+                                        integration
+                                      </>
+                                    ) : feature.includes("Priority") ? (
+                                      <>
+                                        <span className="text-blue-400 font-medium">
+                                          Priority
+                                        </span>{" "}
+                                        support
+                                      </>
+                                    ) : feature.includes("Chrome") ? (
+                                      <>
+                                        <span className="text-purple-400 font-medium">
+                                          Chrome
+                                        </span>{" "}
+                                        extension
+                                      </>
+                                    ) : (
+                                      feature
+                                    )}
                                   </span>
                                 </div>
                               ))}
