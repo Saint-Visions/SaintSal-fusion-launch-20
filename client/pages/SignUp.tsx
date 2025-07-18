@@ -243,7 +243,9 @@ export default function SignUp() {
                                 )}
                               </h3>
                               <div className="text-right">
-                                <span className="text-3xl font-bold">
+                                <span
+                                  className={`text-3xl font-bold ${plan.id === "pro" ? "text-green-400 saintvision-glow" : ""}`}
+                                >
                                   ${plan.price}
                                 </span>
                                 <span className="text-white/60 ml-1">
