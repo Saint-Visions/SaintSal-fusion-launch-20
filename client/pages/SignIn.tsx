@@ -51,7 +51,7 @@ export default function SignIn() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.65) 0%, rgba(16, 22, 28, 0.55) 100%), 
+          backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(16, 22, 28, 0.75) 100%), 
                                                       url('https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F318002d06a1a43ddab311553a42ce777?format=webp&width=800')`,
         }}
       ></div>
