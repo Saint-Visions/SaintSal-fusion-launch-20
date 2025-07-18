@@ -265,27 +265,42 @@ export default function Pricing() {
                       >
                         <Check className="w-5 h-5 text-gold-300 flex-shrink-0 mt-0.5" />
                         <span className="text-white/90 text-sm">
-                          {feature.includes("GPT-4o")
-                            ? feature
-                                .replace(
-                                  "GPT-4o",
-                                  '<span class="text-blue-400 font-medium">GPT-4o</span>',
-                                )
-                                .replace(
-                                  "Azure",
-                                  '<span class="text-purple-400 font-medium">Azure</span>',
-                                )
-                            : feature.includes("CRM")
-                              ? feature.replace(
-                                  "CRM",
-                                  '<span class="text-green-400 font-medium">CRM</span>',
-                                )
-                              : feature.includes("API")
-                                ? feature.replace(
-                                    "API",
-                                    '<span class="text-yellow-400 font-medium">API</span>',
-                                  )
-                                : feature}
+                          {feature.includes("GPT-4o") ? (
+                            <>
+                              Dual AI system (
+                              <span className="text-blue-400 font-medium">
+                                GPT-4o
+                              </span>{" "}
+                              +{" "}
+                              <span className="text-purple-400 font-medium">
+                                Azure
+                              </span>
+                              )
+                            </>
+                          ) : feature.includes("CRM") ? (
+                            <>
+                              <span className="text-green-400 font-medium">
+                                CRM
+                              </span>{" "}
+                              connection (GHL)
+                            </>
+                          ) : feature.includes("API") ? (
+                            <>
+                              <span className="text-yellow-400 font-medium">
+                                API
+                              </span>{" "}
+                              access
+                            </>
+                          ) : feature.includes("Priority") ? (
+                            <>
+                              <span className="text-blue-400 font-medium">
+                                Priority
+                              </span>{" "}
+                              support
+                            </>
+                          ) : (
+                            feature
+                          )}
                         </span>
                       </li>
                     ))}
