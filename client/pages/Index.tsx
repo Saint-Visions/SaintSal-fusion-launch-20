@@ -49,13 +49,13 @@ export default function Index() {
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12">
         <div className="flex items-center space-x-3">
           <div className="relative">
-            {/* Main Logo Circle */}
-            <div className="w-14 h-14 bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 rounded-full flex items-center justify-center saintvision-glow shadow-xl">
-              <div className="w-10 h-10 bg-charcoal-900 rounded-full flex items-center justify-center">
-                <span className="text-gold-400 font-black text-lg tracking-tight">
-                  S
-                </span>
-              </div>
+            {/* Main SaintVisionAI Logo */}
+            <div className="w-16 h-16 flex items-center justify-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc7f61ecbaaed4526b55b31ffdaf703ec?format=webp&width=800"
+                alt="SaintVisionAI Logo"
+                className="w-14 h-14 object-contain saintvision-glow"
+              />
             </div>
             {/* AI Indicator */}
             <div className="absolute -top-1 -right-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
