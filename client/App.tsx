@@ -34,6 +34,13 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/console" element={<Console />} />
+          <Route path="/partnertech" element={<PartnerTech />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/upgrade" element={<Upgrade />} />
+          <Route path="/chrome-install" element={<ChromeInstall />} />
+          <Route path="/crm" element={<CRM />} />
           <Route path="/help" element={<Help />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
