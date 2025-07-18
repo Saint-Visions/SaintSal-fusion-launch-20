@@ -91,7 +91,9 @@ export default function Dashboard() {
             <h1 className="text-lg font-bold saintvision-gradient-text font-dialien">
               Dashboard
             </h1>
-            <p className="text-xs text-gold-300 -mt-1">SaintSal™ Console</p>
+            <p className="text-xs text-gold-300 -mt-1 font-dropline">
+              SaintSal™ Console
+            </p>
           </div>
         </div>
 
