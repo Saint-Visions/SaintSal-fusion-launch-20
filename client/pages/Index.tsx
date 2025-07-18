@@ -174,10 +174,13 @@ export default function Index() {
 
           {/* Hero Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl">
-            AI doesn't just answer. It adapts. It empowers. It becomes
+            AI doesn't just answer. It{" "}
+            <span className="text-blue-400 font-medium">adapts</span>. It{" "}
+            <span className="text-purple-400 font-medium">empowers</span>. It
+            becomes
             <span className="text-gold-300 font-semibold">
               {" "}
-              your GOTTA GUY™
+              your enterprise companion
             </span>
             .
           </p>
