@@ -66,9 +66,6 @@ export default function Index() {
                 alt="SaintVisionAI Logo"
                 className="w-8 h-8 object-contain mr-2"
               />
-              <span className="text-gold-400 font-bold text-lg saintvision-glow">
-                SaintVisionAI™
-              </span>
             </div>
             {/* AI Indicator */}
             <div className="absolute -top-1 -right-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
