@@ -19,6 +19,7 @@ import Upgrade from "./pages/Upgrade";
 import ChromeInstall from "./pages/ChromeInstall";
 import CRM from "./pages/CRM";
 import AdminClients from "./pages/AdminClients";
+import AdminLogs from "./pages/AdminLogs";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
