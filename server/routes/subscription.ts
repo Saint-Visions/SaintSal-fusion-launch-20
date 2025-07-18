@@ -42,7 +42,7 @@ export async function handleWebhook(req: Request, res: Response) {
     let event;
 
     try {
-      event = stripe.webhooks.constructEvent(
+      event = getStripe().webhooks.constructEvent(
         req.body,
         sig as string,
         webhookSecret,
