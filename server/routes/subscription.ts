@@ -10,7 +10,7 @@ export async function createCheckoutSession(req: Request, res: Response) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       payment_method_types: ["card"],
       customer_email: email,
       line_items: [
