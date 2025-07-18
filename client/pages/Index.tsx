@@ -41,7 +41,7 @@ export default function Index() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.95) 0%, rgba(16, 22, 28, 0.85) 100%), 
-                           url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+                                                      url('https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F317f7c64793d47ab90d506bd066bedbb?format=webp&width=800')`,
           transform: `translateY(${scrollY * 0.3}px)`,
         }}
       ></div>
