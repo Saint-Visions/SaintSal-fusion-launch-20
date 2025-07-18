@@ -69,7 +69,7 @@ export default function SignUp() {
     },
     {
       id: "enterprise",
-      name: "Pro Suite",
+      name: "Enterprise",
       price: 297,
       popular: false,
       features: [
