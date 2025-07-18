@@ -10,6 +10,7 @@
     "start": "node dist/server/node-build.mjs"
   },
   "dependencies": {
+    "@radix-ui/react-toast": "^1.2.14",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@stripe/stripe-js": "^7.5.0",
     "@supabase/supabase-js": "^2.52.0",
