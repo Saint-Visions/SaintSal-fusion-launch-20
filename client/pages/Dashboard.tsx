@@ -236,9 +236,21 @@ export default function Dashboard() {
                   </div>
                   <div>
                     <h2 className="text-xl font-bold">
-                      {activeChat === "gpt4o"
-                        ? "GPT-4o Assistant"
-                        : "Azure Cognitive Services"}
+                      {activeChat === "gpt4o" ? (
+                        <>
+                          <span className="text-blue-400 font-semibold">
+                            GPT-4o
+                          </span>{" "}
+                          Assistant
+                        </>
+                      ) : (
+                        <>
+                          <span className="text-purple-400 font-semibold">
+                            Azure
+                          </span>{" "}
+                          Cognitive Services
+                        </>
+                      )}
                     </h2>
                     <p className="text-sm text-gold-300">
                       {activeChat === "gpt4o"
