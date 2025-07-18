@@ -62,7 +62,7 @@ export default function Index() {
             {/* Main SaintVisionAI Logo */}
             <div className="w-16 h-16 flex items-center justify-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2161a54cab734be28198076b16185a42?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F1fad4f7c944249c3a8a02d8e8ae77b26?format=webp&width=800"
                 alt="SaintVisionAI Logo"
                 className="w-14 h-14 object-contain saintvision-glow"
               />
