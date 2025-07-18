@@ -199,7 +199,7 @@ export default function SignUp() {
                 className={`transform transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               >
                 <h2 className="text-2xl font-semibold mb-8 text-center lg:text-left tracking-tight">
-                  <span className="saintvision-gradient-text">
+                  <span className="saintvision-gradient-text font-dialien">
                     Subscription Tiers
                   </span>
                 </h2>
