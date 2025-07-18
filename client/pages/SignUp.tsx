@@ -170,11 +170,20 @@ export default function SignUp() {
             </h1>
 
             <p className="text-lg md:text-xl text-white/75 mb-8 max-w-2xl mx-auto font-light">
-              Select your subscription tier for SaintVisionAI enterprise
-              infrastructure.
+              Select your subscription tier for SaintVisionAI{" "}
+              <span className="text-blue-400 font-medium">
+                enterprise infrastructure
+              </span>
+              .
               <br />
-              <span className="text-gold-300 font-medium text-base">
-                HACP™ compliant • SOC 2 certified • Enterprise SLA
+              <span className="text-base">
+                <span className="text-yellow-400 font-semibold">HACP™</span>{" "}
+                compliant •
+                <span className="text-blue-400 font-medium"> SOC 2</span>{" "}
+                certified •
+                <span className="text-purple-400 font-medium">
+                  Enterprise SLA
+                </span>
               </span>
             </p>
           </div>
