@@ -77,65 +77,45 @@ export default function SignIn() {
               </div>
             </div>
 
-            {/* Hero Content */}
+            {/* Enterprise Content */}
             <div className="space-y-8">
-              <h2 className="text-5xl font-bold leading-tight">
-                Meet Your
+              <h2 className="text-4xl font-bold leading-tight tracking-tight">
+                Enterprise AI
                 <br />
-                <span className="saintvision-gradient-text">GOTTA GUY™</span>
+                <span className="saintvision-gradient-text">
+                  Intelligence Platform
+                </span>
               </h2>
 
-              <p className="text-xl text-white/80 leading-relaxed">
-                Join thousands of entrepreneurs who've found their AI companion.
-                Faith-aligned, enterprise-ready, and built to scale with your
-                vision.
+              <p className="text-lg text-white/85 leading-relaxed font-light">
+                Advanced artificial intelligence infrastructure designed for
+                enterprise deployment. Secure, scalable, and compliant with
+                institutional requirements.
               </p>
 
-              {/* Features */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gold-500/20 rounded-full flex items-center justify-center">
-                    <Shield className="w-4 h-4 text-gold-300" />
-                  </div>
-                  <span className="text-white/90">
-                    Patented HACP™ Technology
-                  </span>
+              {/* Key Capabilities */}
+              <div className="space-y-3">
+                <div className="text-white/75 text-sm font-medium">
+                  • Multi-modal AI processing with enterprise-grade security
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
-                    <Sparkles className="w-4 h-4 text-blue-300" />
-                  </div>
-                  <span className="text-white/90">
-                    Dual AI System (GPT-4o + Azure)
-                  </span>
+                <div className="text-white/75 text-sm font-medium">
+                  • HACP™ compliance and SOC 2 Type II certification
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
-                    <Star className="w-4 h-4 text-green-300" />
-                  </div>
-                  <span className="text-white/90">
-                    Enterprise Security Ready
-                  </span>
+                <div className="text-white/75 text-sm font-medium">
+                  • Scalable infrastructure with 99.9% uptime SLA
                 </div>
               </div>
 
-              {/* Testimonial */}
-              <div className="glass-morphism p-6 rounded-xl">
-                <p className="text-white/90 italic mb-4">
-                  "SaintSal™ isn't just an AI tool – it's my business partner.
-                  The faith-aligned approach and enterprise features make it
-                  perfect for serious entrepreneurs."
-                </p>
+              {/* Status Indicator */}
+              <div className="glass-morphism p-4 rounded-lg">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center">
-                    <span className="text-charcoal-900 font-bold text-sm">
-                      MJ
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Marcus Johnson</p>
-                    <p className="text-gold-300 text-sm">Tech Entrepreneur</p>
-                  </div>
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-white/90 text-sm font-medium">
+                    All systems operational
+                  </span>
+                </div>
+                <div className="text-white/60 text-xs mt-1">
+                  Last updated: {new Date().toLocaleTimeString()}
                 </div>
               </div>
             </div>
