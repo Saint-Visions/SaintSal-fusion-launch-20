@@ -133,7 +133,10 @@ export default function Dashboard() {
                   onClick={() => setActiveChat("gpt4o")}
                 >
                   <Brain className="w-4 h-4 mr-2" />
-                  GPT-4o Primary
+                  <span className="text-blue-400 font-semibold">
+                    GPT-4o
+                  </span>{" "}
+                  Primary
                   <Sparkles className="w-3 h-3 ml-auto" />
                 </Button>
                 <Button
