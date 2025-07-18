@@ -68,7 +68,7 @@ export async function handleWebhook(req: Request, res: Response) {
       case "customer.subscription.updated":
       case "customer.subscription.deleted":
         const subscription = event.data.object as any;
-        await supabaseAdmin
+        await getSupabaseAdmin()
           .from("subscriptions")
           .update({
             status: subscription.status,
