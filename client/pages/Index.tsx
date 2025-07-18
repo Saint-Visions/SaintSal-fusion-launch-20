@@ -136,10 +136,12 @@ export default function Index() {
           <div className="mb-8">
             <div className="relative inline-block -mt-1 -mb-1">
               <div
-                className="w-32 h-32 mx-auto mb-11 bg-cover bg-center bg-no-repeat"
+                className="mx-auto mb-11 bg-cover bg-center bg-no-repeat"
                 style={{
                   backgroundImage:
-                    "url(https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/svt-sick-transparent-square-copy-54c1f3)",
+                    "url(https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/better-saintsal-transparent-d9c734)",
+                  width: "188px",
+                  height: "188px",
                 }}
               />
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
