@@ -55,6 +55,23 @@ export default function Index() {
         }}
       ></div>
 
+      {/* SaintVisionAI Branding Overlay */}
+      <div
+        className="absolute inset-0 flex items-center justify-center opacity-30"
+        style={{
+          transform: `translateY(${scrollY * 0.15}px)`,
+        }}
+      >
+        <div className="text-center">
+          <h2 className="text-6xl font-bold text-gold-400 mb-2 saintvision-glow tracking-wider">
+            SaintVisionAI
+          </h2>
+          <p className="text-xl text-gold-300 font-medium tracking-wide">
+            Enterprise AI Solutions
+          </p>
+        </div>
+      </div>
+
       {/* Navigation */}
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12">
         <div className="flex items-center space-x-3">
