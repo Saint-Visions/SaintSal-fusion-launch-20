@@ -142,13 +142,13 @@ export default function SignIn() {
             <div className="glass-morphism p-8 rounded-2xl">
               {/* Header */}
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-2">
-                  {isSignUp ? "Join SaintSal™" : "Welcome Back"}
+                <h2 className="text-2xl font-semibold mb-2 tracking-tight">
+                  {isSignUp ? "Create Account" : "Sign In"}
                 </h2>
-                <p className="text-white/70">
+                <p className="text-white/60 text-sm">
                   {isSignUp
-                    ? "Start cooking knowledge with your AI companion"
-                    : "Sign in to your SaintSal™ dashboard"}
+                    ? "Access enterprise AI infrastructure"
+                    : "Access your SaintVisionAI platform"}
                 </p>
               </div>
 
