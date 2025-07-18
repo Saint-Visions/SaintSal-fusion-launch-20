@@ -125,7 +125,7 @@ export default function Dashboard() {
           >
             {/* AI Model Selector */}
             <div className="mb-8">
-              <h3 className="text-sm font-semibold text-gold-300 mb-4 uppercase tracking-wider">
+              <h3 className="text-sm font-semibold text-gold-300 mb-4 uppercase tracking-wider font-dialien">
                 Dual AI System
               </h3>
               <div className="space-y-3">
