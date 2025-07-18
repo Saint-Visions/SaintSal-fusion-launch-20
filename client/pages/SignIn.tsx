@@ -69,7 +69,7 @@ export default function SignIn() {
                   <Crown className="w-8 h-8 text-charcoal-900" />
                 </div>
                 <div>
-                  <h1 className="text-3xl font-bold saintvision-gradient-text font-dropline">
+                  <h1 className="text-3xl font-bold saintvision-gradient-text font-dialien">
                     SaintVisionAI™
                   </h1>
                   <p className="text-gold-300 font-medium">Cookin' Knowledge</p>
