@@ -62,7 +62,7 @@ export default function Index() {
             {/* Main SaintVisionAI Logo */}
             <div className="w-16 h-16 flex items-center justify-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fe06f5746a4ab460e897ca1d4deec20b6?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/cxookimn-trsansparent-a48b68"
                 alt="SaintVisionAI Logo"
                 className="w-14 h-14 object-contain saintvision-glow"
               />
@@ -125,14 +125,14 @@ export default function Index() {
         >
           {/* Main Logo/Brand */}
           <div className="mb-8">
-            <div className="relative inline-block">
-              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F07e8a947a43148568d37fdac2aba4734?format=webp&width=800"
-                  alt="SaintSal Logo"
-                  className="w-28 h-28 object-contain saintvision-glow-strong animate-pulse"
-                />
-              </div>
+            <div className="relative inline-block -mt-1 -mb-1">
+              <div
+                className="w-32 h-32 mx-auto mb-11 bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage:
+                    "url(https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/svt-sick-transparent-square-copy-54c1f3)",
+                }}
+              />
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
