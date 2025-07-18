@@ -28,8 +28,13 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-charcoal-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 circuit-pattern opacity-5"></div>
+      {/* Background Pattern - Parallax Layer 1 */}
+      <div
+        className="absolute inset-0 circuit-pattern opacity-5"
+        style={{
+          transform: `translateY(${scrollY * 0.1}px)`,
+        }}
+      ></div>
 
       {/* Hero Background Image */}
       <div
