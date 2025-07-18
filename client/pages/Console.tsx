@@ -139,7 +139,11 @@ export default function Console() {
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12 border-b border-white/10">
         <div className="flex items-center space-x-4">
           <div className="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center saintvision-glow">
-            <Crown className="w-5 h-5 text-charcoal-900" />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F26e5b46954b5414f8dd87c2e3056f39d?format=webp&width=800"
+              alt="SaintVisionAI Logo"
+              className="w-5 h-5 object-contain"
+            />
           </div>
           <div>
             <h1 className="text-lg font-bold saintvision-gradient-text">
