@@ -150,7 +150,7 @@ export default function SignIn() {
               <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl flex items-center justify-center mx-auto mb-4 saintvision-glow">
                 <Crown className="w-8 h-8 text-charcoal-900" />
               </div>
-              <h1 className="text-2xl font-bold saintvision-gradient-text font-dropline">
+              <h1 className="text-2xl font-bold saintvision-gradient-text font-dialien">
                 SaintVisionAI™
               </h1>
               <p className="text-gold-300 font-dropline">Cookin' Knowledge</p>
