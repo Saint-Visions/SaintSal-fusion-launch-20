@@ -65,11 +65,11 @@ export default function SignIn() {
             {/* Logo */}
             <div className="mb-12">
               <div className="flex items-center space-x-4 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl flex items-center justify-center saintvision-glow">
+                <div className="w-16 h-16 flex items-center justify-center">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F66fe1620bff64382adab8967dd63b6ff?format=webp&width=800"
                     alt="SaintVisionAI Logo"
-                    className="w-8 h-8 object-contain"
+                    className="w-16 h-16 object-contain"
                   />
                 </div>
                 <div>
@@ -151,11 +151,11 @@ export default function SignIn() {
           >
             {/* Mobile Logo */}
             <div className="lg:hidden mb-12 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl flex items-center justify-center mx-auto mb-4 saintvision-glow">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F66fe1620bff64382adab8967dd63b6ff?format=webp&width=800"
                   alt="SaintVisionAI Logo"
-                  className="w-8 h-8 object-contain"
+                  className="w-16 h-16 object-contain"
                 />
               </div>
               <h1 className="text-2xl font-bold saintvision-gradient-text font-dialien">
