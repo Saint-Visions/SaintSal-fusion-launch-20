@@ -4,31 +4,39 @@ import path from "path";
 import { createServer } from "./server";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
-  },
-  build: {
-    outDir: "dist/spa",
-  },
-  plugins: [react(), expressPlugin()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./client"),
-      "@shared": path.resolve(__dirname, "./shared"),
-    },
-  },
-}));
+export default defineConfig(({ command, mode }) => {
+  const isDev = command === "serve";
 
+  return {
+    server: {
+      host: "::",
+      port: 8080,
+    },
+    build: {
+      outDir: "dist/spa",
+      sourcemap: false,
+      chunkSizeWarningLimit: 1000,
+    },
+    plugins: [
+      react(),
+      ...(isDev ? [expressPlugin()] : []), // Only apply express in dev mode
+    ],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./client"),
+        "@shared": path.resolve(__dirname, "./shared"),
+      },
+    },
+  };
+});
+
+// Express plugin for local dev
 function expressPlugin(): Plugin {
   return {
-    name: "express-plugin",
-    apply: "serve", // Only apply during development (serve mode)
+    name: "express-dev-plugin",
+    apply: "serve",
     configureServer(server) {
       const app = createServer();
-
-      // Add Express app as middleware to Vite dev server
       server.middlewares.use(app);
     },
   };
