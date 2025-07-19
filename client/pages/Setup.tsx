@@ -138,18 +138,22 @@ export default function Setup() {
   };
 
   const handleInputChange = (field: string, value: any) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const handleArrayToggle = (field: string, value: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: prev[field as keyof typeof prev].includes(value)
-        ? (prev[field as keyof typeof prev] as string[]).filter(
-            (item) => item !== value,
-          )
-        : [...(prev[field as keyof typeof prev] as string[]), value],
-    }));
+    setFormData(prev => {
+      const currentValue = prev[field as keyof typeof prev];
+      if (Array.isArray(currentValue)) {
+        return {
+          ...prev,
+          [field]: currentValue.includes(value)
+            ? currentValue.filter(item => item !== value)
+            : [...currentValue, value],
+        };
+      }
+      return prev;
+    });
   };
 
   const isStepValid = () => {
@@ -174,7 +178,7 @@ export default function Setup() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.98) 0%, rgba(16, 22, 28, 0.95) 100%), 
+          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.98) 0%, rgba(16, 22, 28, 0.95) 100%),
                            url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80')`,
         }}
       ></div>
@@ -209,7 +213,11 @@ export default function Setup() {
         <div className="max-w-4xl mx-auto">
           {/* Mobile-Optimized Progress Bar */}
           <div
-            className={`mb-6 md:mb-8 transform transition-all duration-1000 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`mb-6 md:mb-8 transform transition-all duration-1000 ${
+              isLoaded
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
           >
             <div className="glass-morphism p-4 md:p-6 rounded-xl">
               <div className="flex items-center justify-between mb-4">
@@ -234,7 +242,11 @@ export default function Setup() {
 
           {/* Step Content */}
           <div
-            className={`transform transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`transform transition-all duration-1000 delay-300 ${
+              isLoaded
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
           >
             <div className="glass-morphism rounded-xl p-6 md:p-8 mb-6">
               {/* Step 1: Welcome */}
@@ -249,9 +261,7 @@ export default function Setup() {
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
                     Welcome to{" "}
-                    <span className="saintvision-gradient-text">
-                      SaintSal™
-                    </span>
+                    <span className="saintvision-gradient-text">SaintSal™</span>
                   </h3>
                   <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
                     We'll guide you through setting up your GOTTA GUY™ AI
@@ -300,7 +310,7 @@ export default function Setup() {
                         Business Type
                       </Label>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
-                        {businessTypes.map((type) => (
+                        {businessTypes.map(type => (
                           <Button
                             key={type}
                             variant={
@@ -328,7 +338,7 @@ export default function Setup() {
                         Industry
                       </Label>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-3">
-                        {industries.map((industry) => (
+                        {industries.map(industry => (
                           <Button
                             key={industry}
                             variant={
@@ -356,7 +366,7 @@ export default function Setup() {
                         Team Size
                       </Label>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
-                        {teamSizes.map((size) => (
+                        {teamSizes.map(size => (
                           <Button
                             key={size}
                             variant={
@@ -448,7 +458,7 @@ export default function Setup() {
                         What do you want to achieve?
                       </Label>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {goalOptions.map((goal) => (
+                        {goalOptions.map(goal => (
                           <Button
                             key={goal}
                             variant={
@@ -488,7 +498,7 @@ export default function Setup() {
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-4">
-                    {integrationOptions.map((integration) => {
+                    {integrationOptions.map(integration => {
                       const Icon = integration.icon;
                       const isSelected = formData.integrations.includes(
                         integration.id,
