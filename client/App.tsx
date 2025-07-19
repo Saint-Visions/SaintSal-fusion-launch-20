@@ -27,6 +27,7 @@ import ReferralInvite from "./pages/ReferralInvite";
 import Workspace from "./pages/Workspace";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
+import DebugRoutes from "./pages/DebugRoutes";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/referral/invite" element={<ReferralInvite />} />
             <Route path="/workspace/:slug" element={<Workspace />} />
             <Route path="/help" element={<Help />} />
+            <Route path="/debug-routes" element={<DebugRoutes />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
