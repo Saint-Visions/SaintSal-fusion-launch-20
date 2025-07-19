@@ -126,7 +126,7 @@ const ChartTooltipContent = React.forwardRef<
       color,
       nameKey,
       labelKey,
-    },
+    }: any,
     ref,
   ) => {
     const { config } = useChart();
@@ -270,7 +270,7 @@ const ChartLegendContent = React.forwardRef<
   ) => {
     const { config } = useChart();
 
-    if (!payload?.length) {
+    if (!payload || !Array.isArray(payload) || payload.length === 0) {
       return null;
     }
 
@@ -283,31 +283,32 @@ const ChartLegendContent = React.forwardRef<
           className,
         )}
       >
-        {payload.map((item) => {
-          const key = `${nameKey || item.dataKey || "value"}`;
-          const itemConfig = getPayloadConfigFromPayload(config, item, key);
+        {Array.isArray(payload) &&
+          payload.map((item: any) => {
+            const key = `${nameKey || item.dataKey || "value"}`;
+            const itemConfig = getPayloadConfigFromPayload(config, item, key);
 
-          return (
-            <div
-              key={item.value}
-              className={cn(
-                "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground",
-              )}
-            >
-              {itemConfig?.icon && !hideIcon ? (
-                <itemConfig.icon />
-              ) : (
-                <div
-                  className="h-2 w-2 shrink-0 rounded-[2px]"
-                  style={{
-                    backgroundColor: item.color,
-                  }}
-                />
-              )}
-              {itemConfig?.label}
-            </div>
-          );
-        })}
+            return (
+              <div
+                key={item.value}
+                className={cn(
+                  "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground",
+                )}
+              >
+                {itemConfig?.icon && !hideIcon ? (
+                  <itemConfig.icon />
+                ) : (
+                  <div
+                    className="h-2 w-2 shrink-0 rounded-[2px]"
+                    style={{
+                      backgroundColor: item.color,
+                    }}
+                  />
+                )}
+                {itemConfig?.label}
+              </div>
+            );
+          })}
       </div>
     );
   },
