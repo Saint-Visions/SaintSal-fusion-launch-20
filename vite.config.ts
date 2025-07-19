@@ -37,7 +37,15 @@ function expressPlugin(): Plugin {
     apply: "serve",
     configureServer(server) {
       const app = createServer();
-      server.middlewares.use(app);
+      // Mount express app for API routes only during development
+      server.middlewares.use((req, res, next) => {
+        if (req.url?.startsWith("/api/")) {
+          app(req, res, next);
+        } else {
+          // Let Vite handle all other routes (SPA fallback)
+          next();
+        }
+      });
     },
   };
 }

@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import path from "path";
 import { handleDemo } from "./routes/demo";
 import { handleChat } from "./routes/chat";
 import {
@@ -32,6 +33,21 @@ export function createServer() {
   app.post("/api/subscription/checkout", createCheckoutSession);
   app.post("/api/webhook", handleWebhook);
   app.get("/api/subscription/:userId", getSubscription);
+
+  // Serve static files in production
+  if (process.env.NODE_ENV === "production") {
+    const spaPath = path.join(process.cwd(), "dist/spa");
+    app.use(express.static(spaPath));
+
+    // SPA fallback: serve index.html for all non-API routes
+    app.get("*", (req, res) => {
+      // Skip API routes
+      if (req.path.startsWith("/api/")) {
+        return res.status(404).json({ error: "API endpoint not found" });
+      }
+      res.sendFile(path.join(spaPath, "index.html"));
+    });
+  }
 
   return app;
 }
