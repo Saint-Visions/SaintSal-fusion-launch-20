@@ -1,29 +1,13 @@
 {
-  "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist/spa",
-  "framework": null,
   "rewrites": [
-    {
-      "source": "/service-worker.js",
-      "destination": "/service-worker.js"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ]
+  "trailingSlash": false
 }
+
