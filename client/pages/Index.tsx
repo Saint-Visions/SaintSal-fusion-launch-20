@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { BrandLogo } from "@/components/ui/brand-logo";
+import { Navigation } from "@/components/ui/navigation";
 import {
   ArrowRight,
   Brain,
@@ -9,6 +11,8 @@ import {
   Crown,
   MessageSquare,
   Sparkles,
+  Play,
+  CheckCircle,
 } from "lucide-react";
 
 export default function Index() {
@@ -40,7 +44,7 @@ export default function Index() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.95) 0%, rgba(16, 22, 28, 0.85) 100%), 
+          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.95) 0%, rgba(16, 22, 28, 0.85) 100%),
                                                       url('https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F317f7c64793d47ab90d506bd066bedbb?format=webp&width=800')`,
           transform: `translateY(${scrollY * 0.3}px)`,
         }}
@@ -51,7 +55,8 @@ export default function Index() {
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%)`,
-          transform: `translateY(${scrollY * 0.2}px) scale(${1 + scrollY * 0.0001})`,
+          transform: `translateY(${scrollY * 0.2}px) scale(${1 +
+            scrollY * 0.0001})`,
         }}
       ></div>
 
@@ -73,68 +78,7 @@ export default function Index() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12">
-        <div className="flex items-center space-x-3">
-          <div className="relative">
-            {/* Main SaintVisionAI Logo */}
-            <div className="flex items-center">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F66fe1620bff64382adab8967dd63b6ff?format=webp&width=800"
-                alt="SaintVisionAI Logo"
-                className="w-8 h-8 object-contain mr-2"
-              />
-            </div>
-            {/* AI Indicator */}
-            <div className="absolute -top-1 -right-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
-              <div
-                className="w-2 h-2 bg-white rounded-full bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage:
-                    "url(https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/cookin-950b8e)",
-                }}
-              ></div>
-            </div>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold saintvision-gradient-text tracking-tight font-dialien">
-              SaintVisionAI™
-            </h1>
-            <p className="text-xs text-gold-300 -mt-1 font-medium">
-              Cookin' Knowledge
-            </p>
-          </div>
-        </div>
-
-        <div className="hidden md:flex items-center space-x-8">
-          <Link
-            to="/dashboard"
-            className="text-white/80 hover:text-gold-300 transition-colors"
-          >
-            Dashboard
-          </Link>
-          <Link
-            to="/pricing"
-            className="text-white/80 hover:text-gold-300 transition-colors"
-          >
-            Pricing
-          </Link>
-          <Link
-            to="/help"
-            className="text-white/80 hover:text-gold-300 transition-colors"
-          >
-            Help
-          </Link>
-          <Button
-            variant="outline"
-            className="border-gold-500 text-gold-300 hover:bg-gold-500 hover:text-charcoal-900"
-          >
-            Sign In
-          </Button>
-          <Button className="bg-gold-500 text-charcoal-900 hover:bg-gold-400 saintvision-glow">
-            Start Cookin'
-          </Button>
-        </div>
-      </nav>
+      <Navigation variant="public" />
 
       {/* Hero Section */}
       <div
@@ -144,38 +88,15 @@ export default function Index() {
         }}
       >
         <div
-          className={`transform transition-all duration-1000 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          className={`transform transition-all duration-1000 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
           {/* Main Logo/Brand */}
-          <div className="mb-8">
-            <div className="relative inline-block -mt-1 -mb-1">
-              <div
-                className="mx-auto mb-11 bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage:
-                    "url(https://cdn.builder.io/api/v1/assets/065997bd13e4442e888a08652fcd61ba/better-saintsal-transparent-d9c734)",
-                  width: "188px",
-                  height: "188px",
-                }}
-              />
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" />
-              </div>
-            </div>
-          </div>
-
-          {/* Hero Title */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-            <span className="saintvision-gradient-text font-dialien">
-              SaintSal™
-            </span>
-          </h1>
-          <h2 className="text-2xl md:text-3xl text-gold-300 mb-6 font-medium font-dropline">
-            Cookin' Knowledge.
-          </h2>
+          <BrandLogo variant="hero" showAIIndicator={true} className="mb-4" />
 
           {/* Hero Subtitle */}
-          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl">
+          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-4xl mx-auto leading-relaxed">
             AI doesn't just answer. It{" "}
             <span className="text-blue-400 font-medium">adapts</span>. It{" "}
             <span className="text-purple-400 font-medium">empowers</span>. It
@@ -187,28 +108,51 @@ export default function Index() {
             .
           </p>
 
+          {/* Key Value Propositions */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 mt-6">
+            <div className="flex items-center text-green-400 text-sm font-medium">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              Enterprise-Grade Security
+            </div>
+            <div className="flex items-center text-blue-400 text-sm font-medium">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              GPT-4o + Azure Integration
+            </div>
+            <div className="flex items-center text-purple-400 text-sm font-medium">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              HACP™ Compliance
+            </div>
+          </div>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 mt-8">
-            <Button
-              size="lg"
-              className="bg-gold-500 text-charcoal-900 hover:bg-gold-400 text-lg px-8 py-4 saintvision-glow group"
-            >
-              Start Cookin' Knowledge
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4 glass-morphism"
-            >
-              Try Console
-            </Button>
+            <Link to="/signup">
+              <Button
+                size="lg"
+                className="bg-gold-500 text-charcoal-900 hover:bg-gold-400 text-lg px-8 py-4 saintvision-glow group transform hover:scale-105 transition-all"
+              >
+                Start Cookin' Knowledge
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/console">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4 glass-morphism group"
+              >
+                <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+                Try Console
+              </Button>
+            </Link>
           </div>
         </div>
 
         {/* Elite Technology Badge */}
         <div
-          className={`transform transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          className={`transform transition-all duration-1000 delay-300 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
           <div className="glass-morphism rounded-full px-6 py-3 mb-8">
             <p className="text-gold-300 font-semibold text-sm uppercase tracking-wider">
@@ -228,7 +172,11 @@ export default function Index() {
       >
         <div className="max-w-6xl mx-auto">
           <div
-            className={`transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`transform transition-all duration-1000 delay-500 ${
+              isLoaded
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
           >
             <h3 className="text-center text-white/80 text-lg font-semibold mb-8">
               <span className="text-blue-400">Dual AI systems</span> handle your
@@ -310,25 +258,153 @@ export default function Index() {
         </div>
       </div>
 
+      {/* Video Demo Section */}
+      <div
+        className="relative z-40 px-6 pb-16"
+        style={{
+          transform: `translateY(${scrollY * 0.04}px)`,
+        }}
+      >
+        <div className="max-w-4xl mx-auto">
+          <div
+            className={`transform transition-all duration-1000 delay-600 ${
+              isLoaded
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                <span className="saintvision-gradient-text font-dialien">
+                  See SaintSal™ in Action
+                </span>
+              </h3>
+              <p className="text-white/80 text-lg max-w-2xl mx-auto">
+                Watch how our AI transforms from conversation to enterprise
+                action
+              </p>
+            </div>
+
+            {/* Demo Video Placeholder */}
+            <div className="relative aspect-video bg-charcoal-800/50 rounded-2xl overflow-hidden glass-morphism group cursor-pointer hover:saintvision-glow transition-all">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold-500/20 to-blue-500/20 opacity-50"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 bg-gold-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform saintvision-glow">
+                  <Play className="w-8 h-8 text-charcoal-900 ml-1" />
+                </div>
+              </div>
+              <div className="absolute bottom-6 left-6 right-6">
+                <h4 className="text-xl font-semibold mb-2">
+                  Enterprise AI Demo
+                </h4>
+                <p className="text-white/70 text-sm">
+                  3 minutes • See real CRM integration & automated workflows
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Proof Section */}
+      <div
+        className="relative z-40 px-6 pb-16"
+        style={{
+          transform: `translateY(${scrollY * 0.05}px)`,
+        }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <div
+            className={`transform transition-all duration-1000 delay-700 ${
+              isLoaded
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                <span className="text-white/90">Trusted by</span>{" "}
+                <span className="saintvision-gradient-text">
+                  Enterprise Leaders
+                </span>
+              </h3>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-gold-300 mb-2">
+                  99.9%
+                </div>
+                <p className="text-white/70">Uptime SLA</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">
+                  <span className="text-gold-300">SOC 2</span>
+                </div>
+                <p className="text-white/70">Type II Certified</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-400 mb-2">
+                  Enterprise
+                </div>
+                <p className="text-white/70">Ready Day One</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom CTA */}
       <div
-        className="relative z-40 text-center pb-12"
+        className="relative z-40 text-center pb-16"
         style={{
           transform: `translateY(${scrollY * 0.03}px)`,
         }}
       >
         <div
-          className={`transform transition-all duration-1000 delay-700 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          className={`transform transition-all duration-1000 delay-800 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
-          <p className="text-white/70 mb-4">Ready to meet your GOTTA GUY™?</p>
-          <div className="flex justify-center">
-            <Button
-              size="lg"
-              className="bg-gold-500 text-charcoal-900 hover:bg-gold-400 saintvision-glow"
-            >
-              <MessageSquare className="mr-2 w-5 h-5" />
-              Start Your First Chat
-            </Button>
+          <div className="glass-morphism rounded-3xl p-12 max-w-4xl mx-auto mb-8">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="saintvision-gradient-text font-dialien">
+                Ready to meet your GOTTA GUY™?
+              </span>
+            </h3>
+            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+              Join thousands of enterprises already cooking knowledge with
+              SaintSal™
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/signup">
+                <Button
+                  size="lg"
+                  className="bg-gold-500 text-charcoal-900 hover:bg-gold-400 saintvision-glow text-lg px-8 py-4 group"
+                >
+                  <MessageSquare className="mr-2 w-5 h-5" />
+                  Start Your First Chat
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-gold-500/50 text-gold-300 hover:bg-gold-500/10 text-lg px-8 py-4"
+                >
+                  View Pricing
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="text-center text-white/50 text-sm">
+            <p>
+              © 2024 SaintVisionAI™. All rights reserved. |{" "}
+              <span className="text-gold-300">Enterprise AI Solutions</span>
+            </p>
           </div>
         </div>
       </div>

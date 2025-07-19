@@ -1,14 +1,35 @@
 {
   "name": "saintsal-fusion-launch",
+  "version": "1.0.0",
+  "description": "SaintVisionAI™ - Enterprise AI Solutions Platform",
+  "keywords": [
+    "enterprise-ai",
+    "saintvisionai",
+    "gpt-4",
+    "business-automation",
+    "ai-platform"
+  ],
+  "author": "SaintVision Group",
+  "license": "UNLICENSED",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build",
     "build:server": "vite build --config vite.config.server.ts",
     "start": "node dist/server/node-build.mjs",
-    "builder:sync": "builder sync --model page --apiKey=065997bd13e4442e888a06852fcd61ba"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "builder:sync": "builder sync --model page --apiKey=065997bd13e4442e888a06852fcd61ba",
+    "deploy:production": "npm run build && npm run start",
+    "clean": "rm -rf dist node_modules/.vite",
+    "postinstall": "npm run typecheck"
   },
   "dependencies": {
     "@radix-ui/react-toast": "^1.2.14",
@@ -54,5 +75,18 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.5.3",
     "vite": "^6.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saintvision/saintvisionai-platform"
+  },
+  "homepage": "https://saintvisionai.com",
+  "bugs": {
+    "url": "https://github.com/saintvision/saintvisionai-platform/issues",
+    "email": "sal@saintvisionai.com"
   }
 }

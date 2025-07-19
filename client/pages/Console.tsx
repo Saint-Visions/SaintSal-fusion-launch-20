@@ -5,6 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { BrandLogo } from "@/components/ui/brand-logo";
+import { Navigation } from "@/components/ui/navigation";
 import {
   Crown,
   Brain,
@@ -77,7 +79,7 @@ export default function Console() {
         timestamp: new Date().toLocaleTimeString(),
         mode: consoleMode,
       };
-      setChatHistory((prev) => [...prev, aiResponse]);
+      setChatHistory(prev => [...prev, aiResponse]);
     }, 1000);
   };
 
@@ -130,27 +132,24 @@ export default function Console() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.98) 0%, rgba(16, 22, 28, 0.95) 100%), 
+          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.98) 0%, rgba(16, 22, 28, 0.95) 100%),
                            url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2125&q=80')`,
         }}
       ></div>
 
       {/* Top Navigation */}
       <nav className="relative z-50 flex items-center justify-between p-6 lg:px-12 border-b border-white/10">
-        <div className="flex items-center space-x-4">
-          <div className="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center saintvision-glow">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F26e5b46954b5414f8dd87c2e3056f39d?format=webp&width=800"
-              alt="SaintVisionAI Logo"
-              className="w-5 h-5 object-contain"
-            />
-          </div>
-          <div>
-            <h1 className="text-lg font-bold saintvision-gradient-text">
-              Console
-            </h1>
-            <p className="text-xs text-gold-300 -mt-1">SaintSal™ Enterprise</p>
-          </div>
+        <BrandLogo
+          variant="header"
+          size="md"
+          showSubtitle={false}
+          className="mr-4"
+        />
+        <div className="flex items-center space-x-2">
+          <h1 className="text-lg font-bold saintvision-gradient-text">
+            Console
+          </h1>
+          <p className="text-xs text-gold-300">SaintSal™ Enterprise</p>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -181,7 +180,11 @@ export default function Console() {
         {/* Admin Sidebar */}
         <div className="w-80 border-r border-white/10 glass-morphism p-6">
           <div
-            className={`transform transition-all duration-1000 ${isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
+            className={`transform transition-all duration-1000 ${
+              isLoaded
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-10 opacity-0"
+            }`}
           >
             {/* Console Mode Toggle */}
             <div className="mb-8">
@@ -191,7 +194,11 @@ export default function Console() {
               <div className="space-y-3">
                 <Button
                   variant={consoleMode === "companion" ? "default" : "ghost"}
-                  className={`w-full justify-start ${consoleMode === "companion" ? "bg-gold-500 text-charcoal-900 saintvision-glow" : "text-white/70 hover:text-gold-300"}`}
+                  className={`w-full justify-start ${
+                    consoleMode === "companion"
+                      ? "bg-gold-500 text-charcoal-900 saintvision-glow"
+                      : "text-white/70 hover:text-gold-300"
+                  }`}
                   onClick={() => setConsoleMode("companion")}
                 >
                   <Crown className="w-4 h-4 mr-2" />
@@ -200,7 +207,11 @@ export default function Console() {
                 </Button>
                 <Button
                   variant={consoleMode === "client" ? "default" : "ghost"}
-                  className={`w-full justify-start ${consoleMode === "client" ? "bg-blue-500 text-white" : "text-white/70 hover:text-blue-300"}`}
+                  className={`w-full justify-start ${
+                    consoleMode === "client"
+                      ? "bg-blue-500 text-white"
+                      : "text-white/70 hover:text-blue-300"
+                  }`}
                   onClick={() => setConsoleMode("client")}
                 >
                   <Users className="w-4 h-4 mr-2" />
@@ -228,7 +239,11 @@ export default function Console() {
                           </span>
                         </div>
                         <span
-                          className={`text-xs ${metric.change.startsWith("+") ? "text-green-300" : "text-red-300"}`}
+                          className={`text-xs ${
+                            metric.change.startsWith("+")
+                              ? "text-green-300"
+                              : "text-red-300"
+                          }`}
                         >
                           {metric.change}
                         </span>
@@ -277,7 +292,11 @@ export default function Console() {
           {/* Console Header */}
           <div className="p-6 border-b border-white/10">
             <div
-              className={`transform transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`transform transition-all duration-1000 delay-300 ${
+                isLoaded
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -329,12 +348,18 @@ export default function Console() {
           {/* Chat Messages */}
           <div className="flex-1 overflow-y-auto p-6 space-y-6">
             <div
-              className={`transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`transform transition-all duration-1000 delay-500 ${
+                isLoaded
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
             >
-              {chatHistory.map((chat) => (
+              {chatHistory.map(chat => (
                 <div
                   key={chat.id}
-                  className={`flex ${chat.type === "user" ? "justify-end" : "justify-start"} mb-6`}
+                  className={`flex ${
+                    chat.type === "user" ? "justify-end" : "justify-start"
+                  } mb-6`}
                 >
                   {chat.type === "ai" && (
                     <div
@@ -352,7 +377,9 @@ export default function Console() {
                     </div>
                   )}
                   <div
-                    className={`max-w-[70%] ${chat.type === "user" ? "order-1" : ""}`}
+                    className={`max-w-[70%] ${
+                      chat.type === "user" ? "order-1" : ""
+                    }`}
                   >
                     <div
                       className={`p-4 rounded-2xl ${
@@ -385,15 +412,19 @@ export default function Console() {
           {/* Message Input */}
           <div className="p-6 border-t border-white/10">
             <div
-              className={`transform transition-all duration-1000 delay-700 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`transform transition-all duration-1000 delay-700 ${
+                isLoaded
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
             >
               <div className="flex items-end space-x-4">
                 <div className="flex-1 relative">
                   <Textarea
                     placeholder={`Console command or query... (${consoleMode} mode)`}
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    onKeyPress={(e) => {
+                    onChange={e => setMessage(e.target.value)}
+                    onKeyPress={e => {
                       if (e.key === "Enter" && !e.shiftKey) {
                         e.preventDefault();
                         handleSendMessage();

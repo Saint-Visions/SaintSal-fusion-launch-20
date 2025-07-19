@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { BrandLogo } from "@/components/ui/brand-logo";
+import { Navigation } from "@/components/ui/navigation";
 import {
   MessageSquare,
   Crown,
@@ -63,7 +65,7 @@ export default function Dashboard() {
         timestamp: new Date().toLocaleTimeString(),
         model: activeChat === "gpt4o" ? "GPT-4o" : "Azure Cognitive",
       };
-      setChatHistory((prev) => [...prev, aiResponse]);
+      setChatHistory(prev => [...prev, aiResponse]);
     }, 1000);
   };
 
@@ -76,7 +78,7 @@ export default function Dashboard() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.98) 0%, rgba(16, 22, 28, 0.95) 100%), 
+          backgroundImage: `linear-gradient(135deg, rgba(16, 22, 28, 0.98) 0%, rgba(16, 22, 28, 0.95) 100%),
                            url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80')`,
         }}
       ></div>
@@ -121,7 +123,11 @@ export default function Dashboard() {
         {/* Sidebar */}
         <div className="w-80 border-r border-white/10 glass-morphism p-6">
           <div
-            className={`transform transition-all duration-1000 ${isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
+            className={`transform transition-all duration-1000 ${
+              isLoaded
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-10 opacity-0"
+            }`}
           >
             {/* AI Model Selector */}
             <div className="mb-8">
@@ -131,7 +137,11 @@ export default function Dashboard() {
               <div className="space-y-3">
                 <Button
                   variant={activeChat === "gpt4o" ? "default" : "ghost"}
-                  className={`w-full justify-start ${activeChat === "gpt4o" ? "bg-gold-500 text-charcoal-900 saintvision-glow" : "text-white/70 hover:text-gold-300"}`}
+                  className={`w-full justify-start ${
+                    activeChat === "gpt4o"
+                      ? "bg-gold-500 text-charcoal-900 saintvision-glow"
+                      : "text-white/70 hover:text-gold-300"
+                  }`}
                   onClick={() => setActiveChat("gpt4o")}
                 >
                   <Brain className="w-4 h-4 mr-2" />
@@ -143,7 +153,11 @@ export default function Dashboard() {
                 </Button>
                 <Button
                   variant={activeChat === "azure" ? "default" : "ghost"}
-                  className={`w-full justify-start ${activeChat === "azure" ? "bg-blue-500 text-white" : "text-white/70 hover:text-blue-300"}`}
+                  className={`w-full justify-start ${
+                    activeChat === "azure"
+                      ? "bg-blue-500 text-white"
+                      : "text-white/70 hover:text-blue-300"
+                  }`}
                   onClick={() => setActiveChat("azure")}
                 >
                   <Shield className="w-4 h-4 mr-2" />
@@ -225,7 +239,11 @@ export default function Dashboard() {
           {/* Chat Header */}
           <div className="p-6 border-b border-white/10">
             <div
-              className={`transform transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`transform transition-all duration-1000 delay-300 ${
+                isLoaded
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -281,12 +299,18 @@ export default function Dashboard() {
           {/* Chat Messages */}
           <div className="flex-1 overflow-y-auto p-6 space-y-6">
             <div
-              className={`transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`transform transition-all duration-1000 delay-500 ${
+                isLoaded
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
             >
-              {chatHistory.map((chat) => (
+              {chatHistory.map(chat => (
                 <div
                   key={chat.id}
-                  className={`flex ${chat.type === "user" ? "justify-end" : "justify-start"} mb-6`}
+                  className={`flex ${
+                    chat.type === "user" ? "justify-end" : "justify-start"
+                  } mb-6`}
                 >
                   {chat.type === "ai" && (
                     <div className="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
@@ -298,10 +322,16 @@ export default function Dashboard() {
                     </div>
                   )}
                   <div
-                    className={`max-w-[70%] ${chat.type === "user" ? "order-1" : ""}`}
+                    className={`max-w-[70%] ${
+                      chat.type === "user" ? "order-1" : ""
+                    }`}
                   >
                     <div
-                      className={`p-4 rounded-2xl ${chat.type === "user" ? "bg-gold-500/20 ml-auto" : "glass-morphism"}`}
+                      className={`p-4 rounded-2xl ${
+                        chat.type === "user"
+                          ? "bg-gold-500/20 ml-auto"
+                          : "glass-morphism"
+                      }`}
                     >
                       <p className="text-white">{chat.content}</p>
                       {chat.model && (
@@ -326,15 +356,19 @@ export default function Dashboard() {
           {/* Message Input */}
           <div className="p-6 border-t border-white/10">
             <div
-              className={`transform transition-all duration-1000 delay-700 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`transform transition-all duration-1000 delay-700 ${
+                isLoaded
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
             >
               <div className="flex items-end space-x-4">
                 <div className="flex-1 relative">
                   <Textarea
                     placeholder="Ask your GOTTA GUY™ anything..."
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    onKeyPress={(e) => {
+                    onChange={e => setMessage(e.target.value)}
+                    onKeyPress={e => {
                       if (e.key === "Enter" && !e.shiftKey) {
                         e.preventDefault();
                         handleSendMessage();

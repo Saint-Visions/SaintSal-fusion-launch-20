@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { BrandLogo } from "@/components/ui/brand-logo";
+import {
+  StatusIndicator,
+  SystemStatus,
+} from "@/components/ui/status-indicator";
 import {
   Crown,
   Mail,
@@ -15,6 +21,7 @@ import {
   Shield,
   Sparkles,
   Star,
+  CheckCircle,
 } from "lucide-react";
 
 export default function SignIn() {
@@ -33,7 +40,7 @@ export default function SignIn() {
   }, []);
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -51,7 +58,7 @@ export default function SignIn() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(16, 22, 28, 0.75) 100%), 
+          backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(16, 22, 28, 0.75) 100%),
                                                       url('https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F318002d06a1a43ddab311553a42ce777?format=webp&width=800')`,
         }}
       ></div>
@@ -60,27 +67,15 @@ export default function SignIn() {
         {/* Left Side - Branding */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-center p-12">
           <div
-            className={`transform transition-all duration-1000 ${isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
+            className={`transform transition-all duration-1000 ${
+              isLoaded
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-10 opacity-0"
+            }`}
           >
             {/* Logo */}
             <div className="mb-12">
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="w-24 h-24 flex items-center justify-center">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc699c3e88ec740d9a8bfc25cb015d198?format=webp&width=800"
-                    alt="SaintVisionAI Logo"
-                    className="w-24 h-24 object-contain"
-                  />
-                </div>
-                <div>
-                  <h1 className="text-3xl font-bold saintvision-gradient-text font-dialien">
-                    SaintVisionAI™
-                  </h1>
-                  <p className="text-gold-300 font-medium font-dropline">
-                    Cookin' Knowledge
-                  </p>
-                </div>
-              </div>
+              <BrandLogo variant="header" size="xl" className="mb-8" />
             </div>
 
             {/* Enterprise Content */}
@@ -106,21 +101,23 @@ export default function SignIn() {
               {/* Key Capabilities */}
               <div className="space-y-3">
                 <div className="text-white/75 text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
                   Multi-modal AI processing with{" "}
                   <span className="text-green-400">
                     enterprise-grade security
                   </span>
                 </div>
                 <div className="text-white/75 text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
-                  <span className="text-yellow-400 font-semibold">HACP™</span>{" "}
+                  <CheckCircle className="w-4 h-4 text-yellow-400 mr-3" />
+                  <span className="text-yellow-400 font-semibold">
+                    HACP™
+                  </span>{" "}
                   compliance and{" "}
                   <span className="text-blue-400">SOC 2 Type II</span>{" "}
                   certification
                 </div>
                 <div className="text-white/75 text-sm font-medium flex items-center">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  <CheckCircle className="w-4 h-4 text-purple-400 mr-3" />
                   Scalable infrastructure with{" "}
                   <span className="text-green-400 font-semibold">
                     99.9% uptime SLA
@@ -129,17 +126,7 @@ export default function SignIn() {
               </div>
 
               {/* Status Indicator */}
-              <div className="glass-morphism p-4 rounded-lg">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-white/90 text-sm font-medium">
-                    All systems operational
-                  </span>
-                </div>
-                <div className="text-white/60 text-xs mt-1">
-                  Last updated: {new Date().toLocaleTimeString()}
-                </div>
-              </div>
+              <SystemStatus />
             </div>
           </div>
         </div>
@@ -147,21 +134,19 @@ export default function SignIn() {
         {/* Right Side - Auth Form */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-6">
           <div
-            className={`w-full max-w-md transform transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`w-full max-w-md transform transition-all duration-1000 delay-300 ${
+              isLoaded
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
           >
             {/* Mobile Logo */}
             <div className="lg:hidden mb-12 text-center">
-              <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc699c3e88ec740d9a8bfc25cb015d198?format=webp&width=800"
-                  alt="SaintVisionAI Logo"
-                  className="w-20 h-20 object-contain"
-                />
-              </div>
-              <h1 className="text-2xl font-bold saintvision-gradient-text font-dialien">
-                SaintVisionAI™
-              </h1>
-              <p className="text-gold-300 font-dropline">Cookin' Knowledge</p>
+              <BrandLogo
+                variant="header"
+                size="lg"
+                className="justify-center"
+              />
             </div>
 
             {/* Auth Card */}
@@ -217,7 +202,7 @@ export default function SignIn() {
                         id="firstName"
                         type="text"
                         value={formData.firstName}
-                        onChange={(e) =>
+                        onChange={e =>
                           handleInputChange("firstName", e.target.value)
                         }
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-gold-500 mt-2"
@@ -233,7 +218,7 @@ export default function SignIn() {
                         id="lastName"
                         type="text"
                         value={formData.lastName}
-                        onChange={(e) =>
+                        onChange={e =>
                           handleInputChange("lastName", e.target.value)
                         }
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-gold-500 mt-2"
@@ -254,9 +239,7 @@ export default function SignIn() {
                       id="email"
                       type="email"
                       value={formData.email}
-                      onChange={(e) =>
-                        handleInputChange("email", e.target.value)
-                      }
+                      onChange={e => handleInputChange("email", e.target.value)}
                       className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-gold-500 pl-12"
                       placeholder="your@email.com"
                       required
@@ -274,7 +257,7 @@ export default function SignIn() {
                       id="password"
                       type={showPassword ? "text" : "password"}
                       value={formData.password}
-                      onChange={(e) =>
+                      onChange={e =>
                         handleInputChange("password", e.target.value)
                       }
                       className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-gold-500 pl-12 pr-12"
